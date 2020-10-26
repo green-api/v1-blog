@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+<!-- Custom front matter -->
+{% block extrahead %}
+
+  <!-- Determine title -->
+  {% set title = config.site_name %}
+  {% if page and page.title and not page.is_homepage %}
+    {% set title = config.site_name ~ " - " ~ page.title | striptags %}
+  {% endif %}
+
+  <!-- The image needs to have an absolute URL -->
+  {% set image = config.site_url ~ 'assets/images/banner.png' %}
+
+  <!-- Open graph meta tags -->
+  <meta property="og:title" content="GREEN API для отправки и получения сообщений WhatsApp">
+  <meta property="og:description" content="GREEN API - интеграция с WhatsApp на любом языке программирования PHP, JavaScript, 1С, Python, Java, C#, VBA">
+  <meta property="og:image" content="https://green-api.com/docs/assets/green-api-logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="GREEN API">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://green-api.com">
+
+  <!-- Twitter meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@squidfunk" />
+  <meta name="twitter:creator" content="@squidfunk" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ config.site_description }}" />
+  <meta name="twitter:image" content="{{ image }}" />
+{% endblock %}

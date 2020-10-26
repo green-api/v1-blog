@@ -1,0 +1,84 @@
+site_name: Green API
+repo_name: green-api/blog
+repo_url: https://github.com/green-api/blog
+edit_uri: edit/master/ru/docs/
+site_dir: build
+site_url: https://green-api.com
+
+nav:
+  - "Главная":
+    - Главная: "/"
+  - "Блог": "index.md"
+  - "Документация":
+    - Документация: "/docs/index.html"
+
+theme:
+  name: material
+  custom_dir:
+    overrides
+    # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+  # Default values, taken from mkdocs_theme.yml
+  language: ru
+  features:
+    - tabs
+  palette:
+    scheme: default
+    primary: green
+    accent: green
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/green-api-logo.png
+
+extra_css:
+  - stylesheets/styles.css
+  - stylesheets/extra.css
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - en
+        - ru
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: "#"
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
