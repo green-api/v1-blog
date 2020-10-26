@@ -1,9 +1,9 @@
 site_name: Green API
-repo_name: green-api/blog
-repo_url: https://github.com/green-api/blog
+repo_name: green-api/v1-blog
+repo_url: https://github.com/green-api/v1-blog
 edit_uri: edit/master/ru/docs/
 site_dir: build
-site_url: https://green-api.com
+site_url: https://greenapi.org
 
 nav:
   - "Главная":
